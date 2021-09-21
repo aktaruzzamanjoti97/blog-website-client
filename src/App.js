@@ -11,7 +11,7 @@ import Write from "./pages/write/Write";
 
 
 function App() {
-  const user = false;
+
   return (
     <Router>
       <TopBar />
@@ -20,16 +20,16 @@ function App() {
           <Home />
         </Route>
         <Route path="/register">
-          {user ? <Home /> : <Register />}
+          <Register />
         </Route>
         <Route path="/login">
-          {user ? <Home /> : <Login />}
+           <Login />
         </Route>
         <Route path="/write">
-          {user ? <Write /> : <Register />}
+          <Write /> 
         </Route>
         <Route path="/settings">
-          {user ? <Settings /> : <Register />}
+           <Settings /> 
         </Route>
         <Route path="/post/:postId">
           <Single />
